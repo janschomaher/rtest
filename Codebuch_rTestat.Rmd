@@ -1,0 +1,140 @@
+---
+title: "Codebuch_rTestat"
+author: "jan"
+date: "2/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Nodes**
+
+\- id
+
+bei Personen Kürzel aus Initialien
+
+bei Organisationen Kürzel aus Buchstaben der Abkürzung o.ä.
+
+\- name_short (Nachname)
+
+bei Personen Nachname
+
+bei Organisatinen Abkürzung in korrekter Schreibweise o. verkürzter/Umgangssprachlicher Name
+
+\- name (voller Name)
+
+voller Name der Person oder Organisation
+
+\- type (0 = Person, 1 = Organisation/Ort/Verband etc.),
+
+0 = Person
+
+1 = Organisation,Gremium, Verband, Verein etc.
+
+\- sex (Geschlecht)
+
+m = männlich
+
+f = weiblich
+
+d = divers
+
+\- birth (Geburtsdatum)
+
+tt-mm-yyyy
+
+\- position (jetzige Position, z.B. Staatssekretär:in, Minister)
+
+sts = Staatssekretär\*in
+
+stm = Staatsminister\*in
+
+bum = Bundesminister\*in
+
+\- education (höchster Bildungsabschluss)
+
+ka = Abitur oder niedriger
+
+ba = Bachelor
+
+ma = Master/Diplom
+
+dr = Promotion
+
+\- subject (Fachrichtung bei Studium/Promotion)
+
+soz = Sozial- und Gesellschaftswissenschaften
+
+jur = Jura
+
+wir = Wirtschaft/Finanzen
+
+\- party (Parteizugehörigkeit)
+
+gru = Bündins 90/Die Grünen
+
+fdp = FDP
+
+spd = SPD
+
+\- religion (Religionszugehörigkeit)
+
+rk = Römisch-Katholisch
+
+ev = evangelisch
+
+mu = muslimisch
+
+\- kids
+
+Anzahl der Kinder
+
+\- twitter
+
+Anzahl follower
+
+\- instagram
+
+Anzahl follower
+
+\- facebook
+
+Anzahl follower
+
+\- youtube
+
+Anzahl Abonnenten
+
+**Edges**
+
+\- from
+
+von id
+
+\- to
+
+zu id
+
+\- relationship
+
+1 = Regierung, umfasst auch Staatsekretäre und das
+
+Bundeskanzleramt, etc. hier sollte als Knoten das entsprechende
+
+Ministerium angegeben werden.
+
+2 = aktuelle und ehemalige politische Funktionen in politischen
+
+Ausschüssen, Gremien und der Partei. etc.
+
+3 = Ehrenamt, umfasst Mitgliedschaften in NGOs, Stiftungen, Gedenkstätten etc.
+
+4 = Beteiligung an privatwirtschaftlichen Unternehmen
+
+5 = Stipendien
+
+6 = ausgeübte Berufstätigkeiten, falls vorhanden
+
+7 = Studien- bzw. (längere) Aufenthaltsort(e) in In- und Ausland
